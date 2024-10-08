@@ -1,0 +1,926 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+@font-face {
+    font-family: 'soulCraft'; /* Name for your font */
+    src: url('../fonts/soulcraftgx.ttf') format('truetype');
+}
+* {
+ margin: 0;
+ padding: 0;   
+ box-sizing: border-box;
+ font-family: "Space Grotesk", sans-serif;
+}
+:root {
+    --orange: #E03715;
+    --dark: #0B121E;
+    --primary-green: #60AA5F;
+    --secondary-green: #30443D;
+    --tertiary-green: #596862;
+    --white: #FCF8F5;
+    --gray: #a1a1a1;
+
+
+  }
+body {
+    /* background-color:  #FCF8F5 !important; */
+    height: 1500px;
+}
+ul {
+    list-style: none;
+}
+.mt-100 {
+    margin-top: 100px !important;
+}
+.mt-50 {
+    margin-top: 50px !important;
+}
+.pb-25 {
+    padding-bottom: 25px !important;
+}
+.py-100 {
+    padding: 100px 0;
+}
+.pb-100 {
+    padding-bottom: 100px;
+}
+.pt-100 {
+    padding-top: 100px;
+}
+.ff-soulCraft {
+    font-family: "soulCraft", sans-serif;
+    font-variation-settings: "wdth" 10, "slnt" 0;
+    letter-spacing: 1px;
+    line-height: 0.9;
+}
+.text-white {
+    color: var(--white);
+}
+.text-primary-green {
+    color: var(--primary-green) !important;
+}
+.text-secondary-green {
+    color: var(--secondary-green) !important;
+}
+.text-tertiary-green {
+    color: var(--tertiary-green) !important;
+}
+.text-gray {
+    color: var(--gray) !important;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    /* background: #9995; */
+    z-index: 999;
+}
+.logo-box {
+    height: 3.5rem;
+}
+.logo-box svg {
+    height: 100%;
+    width: auto;
+}
+.logo-box svg:hover path {
+    fill: var(--primary-green) !important;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.nav-bar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.social-icons li a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    padding: 0.5rem;
+}
+.social-icons li a::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--gray);
+    /* filter: blur(10px); */
+    opacity: 0.085;
+    border-radius: 50%;
+}
+.social-icons li:hover a svg path {
+    fill: var(--primary-green) !important;
+    transition: 0.3s ease-in-out;
+}
+.menu-btn svg {
+    height: 100%;
+}
+.nav-bar .menu-btn {
+    position: relative;
+    height: 3.5rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-bar .menu-btn span {
+    position: absolute;
+    color: var(--white);
+    z-index: 1;
+    font-family: "soulCraft", sans-serif;
+    margin-top: 8px;
+}
+.nav-bar .menu-btn:hover svg {
+    transform: scale(1.1, 0.9);
+    transition: 0.5s cubic-bezier(.5,-2.75,.5,2);
+}
+.nav-bar .menu-btn:hover svg path {
+    fill: var(--primary-green) !important;
+    transition: 0.3s ease-in-out ;
+}
+
+/* Hero Section CSS */
+
+#hero-section {
+    height: 100vh;
+    width: 100%;
+    /* background-color: var(--secondary-green); */
+    position: relative;
+    /* background-image: url(../img/tree-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom; */
+    overflow: hidden;
+}
+#hero-section .hero-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    padding-top: 25%;
+    position: relative;
+    z-index: 2;
+}
+#hero-section .text-one, #hero-section .text-two {
+    text-align: center;
+    word-spacing: 5px;
+}
+#hero-section .text-one span, #hero-section .text-two span {
+    display: flex;
+    overflow: hidden;
+}
+#hero-section .text-one span div div, #hero-section .text-two span div div {
+    font-family: "soulCraft", sans-serif;
+    font-variation-settings: "wdth" 10, "slnt" 0;
+    letter-spacing: 1px;
+    line-height: 0.9;
+
+}
+#hero-section .text-one span div div {
+    font-size: 4rem;
+    color: var(--dark);
+}
+#hero-section .text-two span div div {
+    font-size: 8rem;
+    color: var(--orange);
+}
+.all-floating-images {
+    background-color: yellow;
+}
+#hero-section .all-floating-images img {
+    position: absolute;
+    z-index: 3;
+    filter: grayscale(1);
+
+}
+#hero-section .all-floating-images #obj-one {
+    top: 15%;
+    left: 10%;
+    transform: rotate(15deg);
+}
+#hero-section .all-floating-images #obj-two {
+    top: 0%;
+    left: 35%;
+    transform: rotate(-15deg);
+}
+#hero-section .all-floating-images #obj-three {
+    top: 30%;
+    left: 25%;
+}
+#hero-section .all-floating-images #obj-four {
+    top: 55%;
+    left: 15%;
+    transform: rotate(245deg);
+
+}
+#hero-section .all-floating-images #obj-five {
+    top: 50%;
+    left: 40%;
+}
+#hero-section .all-floating-images #obj-six {
+    top: 22%;
+    right: 20%;
+}
+#hero-section .all-floating-images #obj-seven {
+    top: 50%;
+    right: 30%;
+    scale : 0.8;
+    transform: rotate(-245deg);
+
+}
+#hero-section .all-floating-images #obj-eight {
+    top: 45%;
+    right: 15%;
+    transform: rotate(45deg);
+
+}
+#hero-section .all-floating-images #forest {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+#hero-section::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 25%;
+    bottom: 0;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: #F0EFED;
+    /* background-color: rebeccapurple; */
+    /* z-index: 1; */
+
+}
+
+#hero-bottom-images {
+    background-color: var(--dark);
+    /* background-color: var(--gray); */
+    width: 100%;
+    height: 450px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+#hero-bottom-images img:not(:first-child) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 1;
+}
+#hero-bottom-images::before {
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 25%;
+    background-color: var(--dark);
+    top: -8%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 40%;
+    z-index: -1;
+}
+/* Hero Section CSS */
+
+/*  Section One CSS */
+
+#section-one, #section-two, #section-three, #section-four, #section-five {
+    background-color: var(--dark);
+    width: 100%;
+    height: auto;
+    position: relative;
+    /* overflow: hidden; */
+}
+#section-six {
+    background-color: var(--secondary-green);
+    width: 100%;
+    height: auto;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+
+.section-title {
+    font-size: 7.5rem;
+    color: var(--white);
+    font-family: "soulCraft", sans-serif;
+    font-variation-settings: "wdth" 10, "slnt" 0;
+    letter-spacing: 1px;
+    line-height: 0.9;
+    text-transform: uppercase;
+}
+
+
+.title-box {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.para20, .para22 {
+    color: var(--white);
+}
+.para20 {
+    font-size: 20px;
+    line-height: 26px;
+}
+.para22 {
+    font-size: 22px;
+    line-height: 30px;  
+}
+.text-justify {
+    text-align: justify;
+}
+.para16 {
+    font-size: 16px;
+    line-height: 20px; 
+    color: var(--white);
+    opacity: 0.8;
+}
+#creative-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    border: none;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    /* width: 40%; */
+}
+#creative-btn .text-change {
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+    background-color: var(--white);
+}
+#creative-btn .text-change span {
+    display: block !important;
+    transition: 0.3s ease-in-out;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 26px;
+
+}
+#creative-btn:hover .text-change span {
+    transform: translateY(-100%);
+}
+#creative-btn:hover {
+    transform: scale(1.2);
+    /* width: 45%; */
+}
+/*  Section One CSS */
+
+/*  Section Two CSS */
+
+#section-two .section-title-one {
+    font-size: 80px;
+    color: var(--white);
+}
+#section-two .section-title-two {
+    font-size: 210px;
+    color: var(--white);
+}
+
+.nft-card h3 {
+    font-size: 30px;
+}
+.nft-card h2 {
+    font-size: 35px;
+}
+.nft-img {
+    /* border: 5px solid red; */
+    border-radius: 50%;
+    background-color: #182029;
+    padding: 15px;
+    width: 15rem;
+    height: 15rem;
+    /* margin: 0 auto 60px auto; */
+}
+
+/*  Section Two CSS */
+
+/*  Section Three CSS */
+
+#section-three .section-title-one, #section-six .section-title-one {
+    font-size: 100px;
+}
+
+#section-three .section-title-two, #section-six .section-title-two {
+    font-size: 155px;
+}
+
+
+
+
+/*  Section Three CSS */
+
+
+/*  Section Four CSS */
+
+#section-four .huge-text{
+    overflow: hidden;
+}
+#section-four .huge-text .one {
+    font-size: 135px;
+}
+#section-four .huge-text .two {
+    font-size: 100px;
+}
+#section-four .huge-text .three {
+    font-size: 170px;
+}
+#section-four .number span{
+    font-size: 305px;
+    transform-origin: left bottom;
+    /* line-height: 320px; */
+/* background-color: red; */
+    /* word-spacing: -80px; */
+}
+#section-four .number span:last-child{
+    font-size: 130px;
+    /* word-spacing: -50px; */
+}
+#section-four .right-side div{
+    font-size: 100px;
+    /* word-spacing: -50px; */
+}
+#section-four {
+    padding-bottom: 200px;
+}
+#section-four .black-stone{
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+}
+
+
+/*  Section Four CSS */
+
+/*  Section Five CSS */
+
+#section-five {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(var(--dark), #FCF8F500), url(../img/wilderness.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+
+}
+#section-five .text-one, #section-five .text-two, #section-seven .text-one, #section-seven .text-two {
+    overflow: hidden;
+    /* background-color: red; */
+}
+#section-five .text-one .ff-soulCraft {
+    font-size: 125px;
+}
+#section-five .text-two .ff-soulCraft {
+    font-size: 195px;
+}
+
+
+/*  Section Five CSS */
+
+
+
+/* Stripe CSS  */
+
+#stripe {
+    /* overflow: hidden; */
+    /* height: 250px; */
+    /* background-color: red; */
+    /* position: relative; */
+
+}
+main {
+    position: relative;
+    overflow: hidden;
+}
+#stripe .stripe-wrapper {
+    background-color: var(--white);
+    padding: 15px 0;
+    transform-origin: left center;
+    transform: rotate(-9deg);
+    position: absolute;
+    bottom: 35%;
+    z-index: 1;
+}
+#stripe .stripe-wrapper-one {
+    /* transform-origin: left center; */
+    transform: rotate(-9deg);
+    bottom: 36.3%;
+}
+#stripe .stripe-wrapper-two {
+    transform: rotate(1deg);
+    bottom: 38.6%;
+}
+#stripe .stripe-wrapper ul li {
+    color: var(--primary-green);
+    font-family: "soulCraft", sans-serif;
+    font-variation-settings: "wdth" 10, "slnt" 0;
+    letter-spacing: 1px;
+    line-height: 0.9;
+    font-size: 30px;
+    padding: 0 10px;
+}
+
+/* Stripe CSS  */
+
+/*  Section Six CSS */
+#section-six {
+    padding-bottom: 30%;
+    background-image: url('../img/fire-vector.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+#section-six .text-center {
+    padding-top: 18rem;
+}
+
+.header-box {
+    height: 10rem;
+    width: 100%;
+    background: var(--white);
+    display: flex;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+.header-box .left-side {
+    height: 100%;
+    width: 72%;
+    /* background-color: burlywood; */
+    display: flex;
+}
+
+.header-box .left-side .date{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 3px solid var(--primary-green);
+    width: 8%;
+}
+.header-box .left-side .date p {
+    display: inline-block;
+    transform: rotate(-90deg);
+    font-size: 20px;
+    line-height: 26px;
+    /* font-weight: bolder; */
+    font-family: 'SoulCraft', sans-serif;
+    /* color: var(--primary-green); */
+    white-space: nowrap;
+}
+.header-box .left-side .chapter{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.header-box .left-side .chapter p{
+    font-size: 30px;
+    color: var(--primary-green);
+    line-height: 34px;
+    font-weight: 600;
+}
+.header-box .left-side .chapter h3{
+    font-size: 34px;
+    line-height: 38px;
+    color: var(--dark);
+}
+.list-- {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.list--  li i{
+    font-size: 8px;
+    padding-right: 15px;
+}
+.header-box .right-side {
+    height: 100%;
+    width: 28%;
+    object-fit: cover;
+    border-radius: 0 1.5rem 1.5rem 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header-box .right-side.one {
+    background-image: url(../img/chapter-1.webp);
+}
+.header-box .right-side.two {
+    background-image: url(../img/chapter-2.webp);
+}
+.header-box .right-side.three {
+    background-image: url(../img/chapter-3.webp);
+}
+.header-box .right-side.four {
+    background-image: url(../img/chapter-4.webp);
+}
+.header-box .right-side.five {
+    background-image: url(../img/chapter-5.webp);
+}
+.header-box .right-side.six {
+    background-image: url(../img/chapter-6.webp);
+}
+.header-box .right-side.seven {
+    background-image: url(../img/25-minted.webp);
+}
+.header-box .right-side.eight {
+    background-image: url(../img/50-minted.webp);
+}
+.header-box .right-side.nine {
+    background-image: url(../img/75-minted.webp);
+}
+.header-box .right-side.ten {
+    background-image: url(../img/100-minted.webp);
+}
+
+
+#section-six .accordion-header {
+    transition: 0.2s ease-in-out;
+}
+#section-six .accordion-header:hover {
+    transform: scale(1.05);
+}
+#section-six .accordion-body {
+    padding-right: 8%;
+}
+
+/*  Section Six CSS */
+
+/*  Section Seven CSS */
+
+#section-seven {
+    background-color: var(--white);
+    height: auto;
+    position: relative;
+}
+
+#section-seven .text-tertiary-green .ff-soulCraft {
+    font-size: 85px;
+    line-height: 0.9;
+}
+#section-seven .text-secondary-green .ff-soulCraft {
+    font-size: 140px;
+    line-height: 0.9;
+}
+#section-seven #creative-btn, #section-seven #creative-btn .text-change {
+background-color: var(--primary-green);
+}
+#section-seven #creative-btn .text-change span {
+    color: var(--white);
+}
+
+.bottom-leaves .leaf-01 {
+    /* transform: scaleX(-1); */
+    width: 65%;
+}
+
+.bottom-leaves .leaf-02 {
+    width: 55%;
+}
+
+.bottom-leaves .leaf-03 {
+    width: 85%;
+}
+
+/*  Section Seven CSS */
+
+
+/* Footer Css */
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--secondary-green);
+    padding: 50px 0 100px 0;
+
+}
+
+/* Footer Css */
+
+
+
+
+
+
+/* Responsive Css */
+
+@media (max-width: 767px)  {
+    /* Mobiles (portrait) */
+    #hero-section .text-one span div div {
+        font-size: 3.5rem;
+    }
+    #hero-section .text-two span div div {
+        font-size: 5rem;
+    }
+    #hero-section .hero-heading {
+        padding-top: 65%;
+    }
+    #hero-section .all-floating-images #obj-one {
+        top: 15%;
+        left: 5%;
+    }
+    #hero-section .all-floating-images #obj-three, #hero-section .all-floating-images #obj-two {
+        display: none;
+    }
+    #hero-section .all-floating-images #obj-eight {
+        top: 65%;
+        right: -25%;
+    }
+    #hero-section .all-floating-images #obj-four {
+        top: 65%;
+        left: -5%;
+    }
+    #hero-section .all-floating-images #obj-seven {
+        top: 30%;
+        right: -20%;
+    }
+    #hero-section .all-floating-images #obj-six {
+        right: -5%;
+    }
+    #hero-section {
+        height: 90vh;
+    }
+    #hero-section .all-floating-images #forest {
+        bottom: 10%;
+    }
+    #hero-section::before {
+        height: 15%;
+    }
+    #hero-bottom-images {
+        height: 160px;
+    }
+    #section-one .section-title {
+        font-size: 2.5rem;
+    }
+    #section-two .section-title-one {
+        font-size: 25px;
+    }
+    #section-two .section-title-two {
+        font-size: 60px;
+    }
+    .para20 {
+        font-size: 16px;
+    }
+    #section-three .section-title-two, #section-six .section-title-two {
+        font-size: 90px;
+    }
+    #section-three .section-title-one, #section-six .section-title-one {
+        font-size: 40px;
+    }
+    #section-four .huge-text .three{
+        font-size: 160px;
+    }
+    #section-four .huge-text .two {
+        font-size: 90px;
+    }
+    #section-four .huge-text .one {
+        font-size: 125px;
+    }
+    #section-four .para22 {
+        text-align: justify;
+    }
+    #stripe {
+        display: none;
+    }
+    #section-four .right-side div{
+        font-size: 50px;
+    }
+    #section-four .number span {
+        font-size: 225px;
+    }
+    #section-four .black-stone {
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+    #section-four .black-stone img{
+        width: 60%;
+    }
+    #section-five .text-two .ff-soulCraft  {
+        font-size: 70px;
+    }
+    #section-five .text-one .ff-soulCraft  {
+        font-size: 65px;
+    }
+    .header-box .left-side .date {
+        width: 12%;
+    }
+    .header-box .left-side .chapter h3{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .header-box .left-side .chapter p{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .header-box .left-side .date p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .header-box{
+        height: 8rem;
+    }
+    #section-six{
+        padding-bottom: 110%;
+    }
+    #section-seven .text-tertiary-green .ff-soulCraft{
+        font-size: 75px;
+    }
+    #section-seven .text-secondary-green .ff-soulCraft{
+        font-size: 110px;
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Tablets, Ipads (portrait) */
+    #hero-section::before {
+        display: none;
+    }
+    #hero-section .text-one span div div {
+        font-size: 3.4rem;
+    }
+
+    #hero-section .all-floating-images #obj-one {
+        top: 22%;
+        left: 0;
+    }
+    #hero-section .all-floating-images #obj-eight {
+        right: 0;
+    }
+    #hero-section .all-floating-images #obj-five {
+        top: 70%;
+        left: 20%;
+    }
+    #hero-section .all-floating-images #obj-seven {
+        top: 60%;
+    }
+    #hero-section .all-floating-images #obj-two, #hero-section .all-floating-images #obj-four {
+        display: none;
+    }
+    #hero-bottom-images {
+        height: 280px;
+    }
+    #section-one .section-title {
+        font-size: 4.2rem;
+    }
+    #hero-section .hero-heading {
+        padding-top: 50%;
+    }
+    #section-two .section-title-one {
+        font-size: 40px;
+    }
+    #section-two .section-title-two {
+        font-size: 110px;
+    }
+    #section-three .section-title-one, #section-six .section-title-one {
+        font-size: 65px;
+    }
+    #section-three .section-title-two, #section-six .section-title-two {
+        font-size: 94px;
+    }
+    #section-four .huge-text .one {
+        font-size: 105px;
+    }
+    #section-four .huge-text .two {
+        font-size: 75px;
+    }
+    #section-four .huge-text .three {
+        font-size: 135px;
+    }
+    #section-four .number span:last-child {
+        font-size: 100px;
+    }
+    #section-four .number span {
+        font-size: 165px;
+    }
+    #section-four .right-side div {
+        font-size: 85px;
+    }
+    #section-four .black-stone {
+        right: 5%;
+    }
+    #stripe {
+        display: none;
+    }
+    #section-six {
+        padding-bottom: 60%;
+    }
+}
+
+
+/* Responsive Css */

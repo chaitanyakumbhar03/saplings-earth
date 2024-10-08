@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title> Saplings NFT - What's Saplings? </title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- bootstarp css -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper js CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Font Awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+
+    <header>
+        <nav class="container">
+            <div class="d-flex nav-bar">
+                <div class="logo-box d-flex align-items-center">
+                    <svg class="d-lg-block d-none" width="154" height="44" viewBox="0 0 154 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: rgb(11, 18, 30);">
+                        <path d="M88.7803 20.2661C90.4984 21.4389 92.6062 21.9239 94.6768 21.6161C97.8785 21.14 100.307 18.9147 101.244 15.9208C97.4261 16.4651 96.1021 15.4971 95.2193 14.8517C104.428 13.4826 104.389 8.05243 101.701 0.686279C99.1791 4.88171 95.3987 5.21187 93.1917 5.40461C91.2952 5.57025 89.5176 6.15625 88.0567 7.41204C86.8115 8.48239 85.92 9.89823 85.4977 11.476C84.9991 13.3392 85.1931 15.356 86.0366 17.0917C89.7026 11.5596 95.5759 10.4019 95.5759 10.4019C95.5759 10.4019 90.5433 13.8003 87.3695 18.9444C85.8819 21.3423 85.0104 23.8443 84.8051 24.9508L86.9578 25.6025C86.9578 25.6025 87.203 23.0103 88.7803 20.2661Z" fill="#0B121E"></path>
+                        <path d="M15.0998 37.145C15.1598 31.2161 11.1072 31.021 6.51418 30.2705C4.89313 29.7001 6.30405 28.7545 7.59489 28.9346C9.68124 28.8896 12.0378 29.0247 13.989 29.4299L14.7996 24.5518C8.12023 22.8407 -1.92129 23.366 0.870519 32.7621C2.23641 36.2594 6.60424 35.8841 9.48611 36.9198C11.0471 38.8561 1.53095 37.6253 0.8405 37.4001L0.0449829 42.3533C5.22335 43.374 15.1448 44.6798 15.0998 37.145Z" fill="#0B121E"></path>
+                        <path d="M58.583 28.2443C57.1721 22.3004 48.3163 24.4768 43.8884 24.0866V42.8638H50.6428V38.8412C58.0877 39.3365 59.9188 34.7285 58.583 28.2443ZM52.6691 32.432C52.489 33.4677 51.5134 33.5727 50.6278 33.5127V29.4C52.7442 29.0848 52.9693 30.7809 52.6691 32.432Z" fill="#0B121E"></path>
+                        <path d="M81.3978 37.5802V42.8637H61.1346V24.2366H68.7596V37.5802H81.3978Z" fill="#0B121E"></path>
+                        <path d="M82.8237 42.8637H89.5781V24.0715H82.8237V42.8637Z" fill="#0B121E"></path>
+                        <path d="M107.019 24.0715V42.8637H101.721L96.5577 35.3739V42.8637H91.2892V24.0715H96.5577L101.721 31.5614V24.0715H107.019Z" fill="#0B121E"></path>
+                        <path d="M136.799 32.5969V42.8636H132.296L130.78 40.6121C126.082 44.3345 113.849 44.2295 110.367 38.901C107.365 34.3681 108.866 26.6981 114.599 25.017C117.196 23.9063 121.489 23.9513 124.596 23.9813C129.639 23.9963 135.643 25.5573 136.514 30.9909L128.949 31.9665C128.303 29.8051 125.977 29.1447 123.845 29.1447C122.434 29.1447 120.348 29.0696 119.177 29.595C115.875 30.6607 115.965 36.3494 119.147 37.4901C120.303 38.0304 122.359 37.9554 123.74 37.9404C125.632 37.9254 127.403 37.4901 128.378 35.9291H120.468V32.5819H136.799V32.5969Z" fill="#0B121E"></path>
+                        <path d="M153.88 37.145C153.94 31.2161 149.887 31.021 145.279 30.2705C143.658 29.7001 145.069 28.7545 146.36 28.9346C148.446 28.8896 150.803 29.0247 152.754 29.4299L153.565 24.5518C146.885 22.8407 136.844 23.366 139.636 32.7621C141.002 36.2594 145.369 35.8841 148.251 36.9198C149.812 38.8561 140.296 37.6253 139.606 37.4001L138.81 42.3533C143.988 43.374 153.91 44.6798 153.88 37.145Z" fill="#0B121E"></path> 
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M34.6275 24.2366H24.0006L16.1805 42.8637H22.2894L23.5353 39.5165H32.6312L33.967 42.8637H42.4776L34.6275 24.2366ZM25.0963 35.2988L27.3477 29.2648H28.5485L30.9501 35.2988H25.0963V35.2988Z" fill="#0B121E"></path></svg>
+                    <svg class="d-lg-none d-block" width="107" height="144" viewBox="0 0 107 144" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: rgb(11, 18, 30);"><path d="M23.0433 113.159C32.9995 119.937 45.2141 122.74 57.2132 120.961C75.7669 118.21 89.84 105.349 95.2677 88.046C73.1453 91.1915 65.4724 85.5971 60.3571 81.8674C113.723 73.9545 113.493 42.5717 97.9175 0C83.3039 24.247 61.3965 26.1551 48.6073 27.269C37.6168 28.2263 27.3161 31.613 18.8502 38.8707C11.6345 45.0566 6.46817 53.2393 4.0211 62.3579C1.13142 73.1258 2.25581 84.782 7.14393 94.8133C28.3879 62.841 62.4233 56.15 62.4233 56.15C62.4233 56.15 33.2596 75.7911 14.8678 105.521C6.24747 119.379 1.19727 133.839 0.00701904 140.234L12.4819 144C12.4819 144 13.903 129.019 23.0433 113.159Z" fill="#0B121E"></path></svg>
+                </div>
+                <div class="right-area d-flex align-items-center gap-4">
+                    <ul class="social-icons d-md-flex d-none gap-3 mb-0 ps-0">
+                        <li>
+                            <a href="#">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.6666 10.0182C25.867 10.3674 25.0201 10.5963 24.1535 10.6976C25.0631 10.1635 25.7472 9.31641 26.0778 8.3147C25.2159 8.81638 24.2759 9.16974 23.297 9.36003C22.8848 8.92825 22.3889 8.58498 21.8397 8.35115C21.2904 8.11733 20.6993 7.99786 20.1023 8.00003C17.6853 8.00003 15.7258 9.9307 15.7258 12.3094C15.7258 12.6464 15.7642 12.976 15.8389 13.2907C14.1051 13.2082 12.4075 12.7653 10.8545 11.99C9.30149 11.2148 7.92713 10.1244 6.81912 8.7883C6.43067 9.44366 6.22649 10.1918 6.22819 10.9536C6.22819 12.4502 7.00045 13.7696 8.17379 14.5408C7.4799 14.5184 6.80101 14.3332 6.19192 14V14.0534C6.19192 16.1419 7.70125 17.8838 9.70125 18.2806C9.32537 18.3803 8.93814 18.4309 8.54925 18.431C8.26659 18.431 7.99245 18.4043 7.72472 18.351C8.01067 19.2127 8.5579 19.9641 9.29039 20.5007C10.0229 21.0372 10.9043 21.3324 11.8122 21.3451C10.2549 22.5446 8.34319 23.1926 6.37752 23.1872C6.02339 23.1872 5.67565 23.1659 5.33325 23.1275C7.33992 24.3976 9.66668 25.0702 12.0415 25.0667C20.0917 25.0667 24.4927 18.4992 24.4927 12.8043L24.4778 12.2464C25.3363 11.6423 26.0779 10.8873 26.6666 10.0182Z" fill="#0B121E"></path></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5447 7.01094C16.5249 6.54302 15.4313 6.19828 14.2879 6.00083C14.2671 5.99702 14.2463 6.00654 14.2356 6.02559C14.0949 6.27573 13.9392 6.60206 13.8301 6.85856C12.6003 6.67445 11.3768 6.67445 10.1722 6.85856C10.0631 6.59636 9.90166 6.27573 9.76038 6.02559C9.74966 6.00718 9.72886 5.99765 9.70803 6.00083C8.56527 6.19765 7.47171 6.54239 6.45129 7.01094C6.44246 7.01475 6.43488 7.02111 6.42986 7.02935C4.35559 10.1283 3.78737 13.151 4.06612 16.1363C4.06738 16.1509 4.07558 16.1648 4.08693 16.1737C5.45547 17.1787 6.78114 17.7889 8.08219 18.1933C8.10301 18.1997 8.12507 18.192 8.13832 18.1749C8.44608 17.7546 8.72043 17.3114 8.95565 16.8454C8.96953 16.8181 8.95628 16.7857 8.92791 16.775C8.49275 16.6099 8.0784 16.4086 7.67982 16.1801C7.64829 16.1617 7.64577 16.1166 7.67477 16.095C7.75865 16.0321 7.84255 15.9667 7.92264 15.9007C7.93713 15.8886 7.95732 15.8861 7.97435 15.8937C10.5929 17.0892 13.4277 17.0892 16.0153 15.8937C16.0323 15.8855 16.0525 15.888 16.0677 15.9001C16.1478 15.9661 16.2316 16.0321 16.3161 16.095C16.3451 16.1166 16.3433 16.1617 16.3117 16.1801C15.9131 16.4131 15.4988 16.6099 15.063 16.7743C15.0346 16.7851 15.022 16.8181 15.0359 16.8454C15.2762 17.3108 15.5505 17.754 15.8526 18.1743C15.8652 18.192 15.8879 18.1997 15.9087 18.1933C17.2161 17.7889 18.5417 17.1787 19.9103 16.1737C19.9223 16.1648 19.9298 16.1515 19.9311 16.1369C20.2647 12.6856 19.3723 9.68765 17.5655 7.02998C17.5611 7.02111 17.5535 7.01475 17.5447 7.01094ZM9.34668 14.3185C8.55833 14.3185 7.90875 13.5948 7.90875 12.7059C7.90875 11.8171 8.54574 11.0933 9.34668 11.0933C10.1539 11.0933 10.7972 11.8234 10.7846 12.7059C10.7846 13.5948 10.1476 14.3185 9.34668 14.3185ZM14.6632 14.3185C13.8748 14.3185 13.2253 13.5948 13.2253 12.7059C13.2253 11.8171 13.8622 11.0933 14.6632 11.0933C15.4704 11.0933 16.1137 11.8234 16.1011 12.7059C16.1011 13.5948 15.4704 14.3185 14.6632 14.3185Z" fill="#0B121E"></path></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 14.204V15.04C20 15.088 19.9707 15.1307 19.928 15.1493C19.6667 15.2613 18.772 15.672 18.4 16.1893C17.4507 17.5107 16.7253 19.4 15.104 19.4H8.33999C5.94267 19.4 4 17.4507 4 15.0453V14.968C4 14.904 4.052 14.852 4.11599 14.852H7.88666C7.96133 14.852 8.01601 14.9213 8.00934 14.9947C7.98267 15.24 8.028 15.4907 8.14399 15.7187C8.36799 16.1733 8.83201 16.4573 9.33332 16.4573H11.2V15H9.35467C9.25999 15 9.20401 14.8907 9.25866 14.8133C9.27867 14.7827 9.30134 14.7507 9.32534 14.7147C9.49999 14.4667 9.74933 14.0813 9.99732 13.6427C10.1667 13.3467 10.3307 13.0307 10.4627 12.7133C10.4893 12.656 10.5107 12.5973 10.532 12.54C10.568 12.4387 10.6053 12.344 10.632 12.2493C10.6587 12.1693 10.68 12.0853 10.7013 12.0067C10.764 11.7373 10.7907 11.452 10.7907 11.156C10.7907 11.04 10.7853 10.9187 10.7747 10.8027C10.7693 10.676 10.7533 10.5493 10.7373 10.4227C10.7267 10.3107 10.7067 10.2 10.6853 10.084C10.6587 9.91466 10.6213 9.74668 10.5787 9.57733L10.564 9.51334C10.532 9.39735 10.5053 9.28666 10.468 9.17067C10.3627 8.80666 10.2413 8.452 10.1133 8.12C10.0667 7.988 10.0133 7.86134 9.96 7.73468C9.88133 7.54399 9.80133 7.37067 9.72799 7.20666C9.69067 7.132 9.65866 7.06399 9.62668 6.99466C9.59066 6.91599 9.55334 6.83735 9.51599 6.76265C9.48934 6.70532 9.45866 6.652 9.43732 6.59867L9.20935 6.17733C9.17733 6.12 9.23066 6.052 9.29332 6.06933L10.72 6.45601H10.724C10.7267 6.45601 10.728 6.45733 10.7293 6.45733L10.9173 6.50933L11.124 6.56799L11.2 6.58933V5.74134C11.2 5.332 11.528 5 11.9333 5C12.136 5 12.32 5.08265 12.452 5.21733C12.584 5.35201 12.6667 5.53601 12.6667 5.74134V7L12.8187 7.04265C12.8307 7.04666 12.8427 7.052 12.8533 7.05999C12.8907 7.08799 12.944 7.12934 13.012 7.17999C13.0653 7.22267 13.1227 7.27466 13.192 7.32799C13.3293 7.43867 13.4933 7.58134 13.6733 7.74532C13.7213 7.78668 13.768 7.82933 13.8107 7.87201C14.0427 8.08799 14.3027 8.34134 14.5507 8.62134C14.62 8.69999 14.688 8.77999 14.7573 8.86399C14.8267 8.94933 14.9 9.03334 14.964 9.11735C15.048 9.22933 15.1387 9.34532 15.2173 9.46668C15.2547 9.52401 15.2973 9.58267 15.3333 9.64C15.4347 9.79334 15.524 9.95201 15.6093 10.1107C15.6453 10.184 15.6827 10.264 15.7147 10.3427C15.8093 10.5547 15.884 10.7707 15.932 10.9867C15.9467 11.0333 15.9573 11.084 15.9627 11.1293V11.14C15.9787 11.204 15.984 11.272 15.9893 11.3413C16.0107 11.5627 16 11.784 15.952 12.0067C15.932 12.1013 15.9053 12.1907 15.8733 12.2853C15.8413 12.376 15.8093 12.4707 15.768 12.56C15.688 12.7453 15.5933 12.9307 15.4813 13.104C15.4453 13.168 15.4027 13.236 15.36 13.3C15.3133 13.368 15.2653 13.432 15.2227 13.4947C15.164 13.5747 15.1013 13.6587 15.0373 13.7333C14.98 13.812 14.9213 13.8907 14.8573 13.96C14.768 14.0653 14.6827 14.1653 14.5933 14.2613C14.54 14.324 14.4827 14.388 14.424 14.4453C14.3667 14.5093 14.308 14.5667 14.2547 14.62C14.1653 14.7093 14.0907 14.7787 14.028 14.836L13.8813 14.9707C13.86 14.9893 13.832 15 13.8027 15H12.6667V16.4573H14.096C14.416 16.4573 14.72 16.344 14.9653 16.136C15.0493 16.0627 15.416 15.7453 15.8493 15.2667C15.864 15.2507 15.8827 15.2387 15.904 15.2333L19.852 14.092C19.9253 14.0707 20 14.1267 20 14.204Z" fill="#0B121E"></path></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.1574 14.5313L15.8761 13.25L17.1574 11.9687C17.494 11.6321 17.761 11.2325 17.9432 10.7927C18.1253 10.353 18.2191 9.88163 18.2191 9.40563C18.2191 8.92962 18.1253 8.45828 17.9432 8.01851C17.761 7.57874 17.494 7.17915 17.1574 6.84257C16.8208 6.50598 16.4213 6.23899 15.9815 6.05683C15.5417 5.87467 15.0704 5.78091 14.5944 5.78091C14.1184 5.78091 13.647 5.87467 13.2073 6.05683C12.7675 6.23899 12.3679 6.50598 12.0313 6.84257L10.75 8.12387L9.4687 6.84257L10.75 5.56126C11.7724 4.55535 13.1509 3.9942 14.5852 4.00005C16.0195 4.00589 17.3934 4.57824 18.4076 5.59244C19.4218 6.60664 19.9941 7.98052 20 9.4148C20.0058 10.8491 19.4446 12.2276 18.4387 13.25L17.1574 14.5313V14.5313ZM14.5939 17.0948L13.3126 18.3761C12.8093 18.8877 12.2096 19.2946 11.5482 19.5733C10.8868 19.852 10.1768 19.997 9.45908 20C8.74137 20.0029 8.03018 19.8637 7.36654 19.5904C6.7029 19.3171 6.09994 18.9151 5.59244 18.4076C5.08494 17.9001 4.68294 17.2971 4.40964 16.6335C4.13633 15.9698 3.99712 15.2586 4.00005 14.5409C4.00297 13.8232 4.14796 13.1132 4.42666 12.4518C4.70537 11.7904 5.11226 11.1907 5.62388 10.6874L6.90518 9.40608L8.18649 10.6874L6.90518 11.9687C6.5686 12.3053 6.3016 12.7049 6.11944 13.1446C5.93728 13.5844 5.84353 14.0557 5.84353 14.5318C5.84353 15.0078 5.93728 15.4791 6.11944 15.9189C6.3016 16.3586 6.5686 16.7582 6.90518 17.0948C7.24177 17.4314 7.64135 17.6984 8.08113 17.8806C8.5209 18.0627 8.99224 18.1565 9.46825 18.1565C9.94425 18.1565 10.4156 18.0627 10.8554 17.8806C11.2951 17.6984 11.6947 17.4314 12.0313 17.0948L13.3126 15.8135L14.5939 17.0948ZM14.5939 8.12387L15.8761 9.40608L9.4687 15.8126L8.18649 14.5313L14.5939 8.12478V8.12387Z" fill="#0B121E"></path></svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="menu-btn">
+                        <span> MENU </span>
+                        <svg viewBox="0 0 396 207" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M190.135 47.3014C213.155 47.3014 229.254 23.8797 222.484 2.81584C222.048 1.45893 223.006 -0.00524405 224.432 0.00375786C248.33 0.154704 271.7 4.86106 293.135 15.5681C325.494 31.7315 331.573 71.4075 333.902 94.2196C334.028 95.4502 335.224 96.2747 336.418 95.9527L388.164 82.0037C390.138 81.4716 392.21 82.5117 392.836 84.458C397.959 100.39 395.519 115.213 392.834 123.041C392.218 124.836 390.31 125.757 388.462 125.323L336.506 113.125C335.278 112.836 334.089 113.871 334.025 115.129C328.964 214.123 239.264 219.526 147.5 191C128.231 185.01 -2.47639 138.122 0.0962219 130.103C13.0489 89.7319 78.9525 34.9917 153.441 11.4913C154.784 11.0675 156.126 12.1459 156.141 13.5542C156.334 31.7737 171.548 47.3014 190.135 47.3014Z" fill="#0B121E"></path></svg>
+                    </button>
+                    <div class="action-btn">
+                        <ul class="mb-0 ps-0">
+                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.1738 4C12.7788 4 13.3265 4.336 13.629 4.832C13.7762 5.072 13.8743 5.368 13.8498 5.68C13.8334 5.92 13.907 6.16 14.0378 6.384C14.4548 7.064 15.3786 7.32 16.0981 6.936C16.9075 6.472 17.9294 6.752 18.3955 7.544L18.9432 8.488C19.4174 9.28 19.1558 10.296 18.3382 10.752C17.6433 11.16 17.398 12.064 17.815 12.752C17.9458 12.968 18.093 13.152 18.3219 13.264C18.608 13.416 18.8288 13.656 18.9841 13.896C19.2866 14.392 19.2621 15 18.9678 15.536L18.3955 16.496C18.093 17.008 17.5288 17.328 16.9484 17.328C16.6622 17.328 16.3434 17.248 16.0817 17.088C15.8692 16.952 15.6239 16.904 15.3623 16.904C14.5529 16.904 13.8743 17.568 13.8498 18.36C13.8498 19.28 13.0976 20 12.1574 20H11.0455C10.0972 20 9.345 19.28 9.345 18.36C9.32865 17.568 8.65007 16.904 7.84068 16.904C7.57088 16.904 7.32561 16.952 7.12122 17.088C6.8596 17.248 6.53258 17.328 6.2546 17.328C5.66596 17.328 5.10184 17.008 4.79934 16.496L4.23522 15.536C3.93272 15.016 3.91637 14.392 4.21886 13.896C4.34968 13.656 4.59494 13.416 4.87292 13.264C5.10184 13.152 5.249 12.968 5.38798 12.752C5.79677 12.064 5.5515 11.16 4.85657 10.752C4.04718 10.296 3.78555 9.28 4.25157 8.488L4.79934 7.544C5.27352 6.752 6.28731 6.472 7.10487 6.936C7.81615 7.32 8.74 7.064 9.15696 6.384C9.28777 6.16 9.36135 5.92 9.345 5.68C9.32865 5.368 9.41858 5.072 9.57392 4.832C9.87642 4.336 10.4242 4.016 11.021 4H12.1738ZM11.6097 9.744C10.3261 9.744 9.28777 10.752 9.28777 12.008C9.28777 13.264 10.3261 14.264 11.6097 14.264C12.8932 14.264 13.907 13.264 13.907 12.008C13.907 10.752 12.8932 9.744 11.6097 9.744Z" fill="#0B121E"></path></svg></li>
+                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.993 10.2421V7.77735H15.8817C16.9204 7.77735 17.7703 6.92744 17.7703 5.88867C17.7703 4.8499 16.9204 4 15.8817 4H13.0487C12.5293 4 12.1043 4.42495 12.1043 4.94434V8.35339L13.993 10.2421ZM5.60728 4.52883C5.51985 4.4414 5.41606 4.37205 5.30183 4.32473C5.1876 4.27742 5.06517 4.25306 4.94152 4.25306C4.81788 4.25306 4.69545 4.27742 4.58122 4.32473C4.46699 4.37205 4.36319 4.4414 4.27577 4.52883C4.18834 4.61626 4.11899 4.72005 4.07167 4.83428C4.02435 4.94851 4 5.07094 4 5.19459C4 5.31823 4.02435 5.44066 4.07167 5.55489C4.11899 5.66912 4.18834 5.77292 4.27577 5.86034L12.1043 13.6983V13.9628C11.2166 13.4528 10.1212 13.2545 8.95968 13.6606C7.69427 14.1138 6.7216 15.2376 6.49496 16.5597C6.39018 17.1546 6.42934 17.7659 6.60916 18.3425C6.78898 18.9192 7.10424 19.4444 7.52858 19.8743C7.95291 20.3042 8.47399 20.6262 9.04825 20.8135C9.62252 21.0008 10.2333 21.0479 10.8295 20.9508C12.6804 20.6581 13.993 18.9583 13.993 17.0791V15.587L18.7336 20.3276C18.821 20.415 18.9248 20.4844 19.039 20.5317C19.1532 20.579 19.2757 20.6034 19.3993 20.6034C19.523 20.6034 19.6454 20.579 19.7596 20.5317C19.8739 20.4844 19.9777 20.415 20.0651 20.3276C20.1525 20.2402 20.2219 20.1364 20.2692 20.0221C20.3165 19.9079 20.3408 19.7855 20.3408 19.6618C20.3408 19.5382 20.3165 19.4158 20.2692 19.3015C20.2219 19.1873 20.1525 19.0835 20.0651 18.9961L5.60728 4.52883Z" fill="#0B121E"></path></svg></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- <div style="width: 100%; height: 88px; background-color: red;"></div> -->
+
+    <main>
+        <section id="hero-section">
+            <div class="container">
+                <div class="hero-heading">
+                    <div>
+                        <h1 class="text-one">
+                            <span class="d-inline-block word-one"> 
+                                <div class="d-flex main-word">
+                                    <div>S</div>
+                                    <div>A</div>
+                                    <div>P</div>
+                                    <div>L</div>
+                                    <div>I</div>
+                                    <div>N</div>
+                                    <div>G</div>
+                                    <div>S</div>
+                                </div>
+                            </span>
+                            <span class="d-inline-block word-two">
+                                <div class="d-flex main-word">
+                                    <div>I</div>
+                                    <div>S</div>
+                                </div>
+                            </span>
+    
+                            <span class="d-inline-block word-three">
+                                <div class="d-flex main-word">
+                                    <div>A</div>
+                                    <div>N</div>
+                                </div>
+                            </span>
+    
+                            <span class="d-inline-block word-four">
+                                <div class="d-flex main-word">
+                                    <div>I</div>
+                                    <div>T</div>
+                                    <div>E</div>
+                                    <div>R</div>
+                                    <div>A</div>
+                                    <div>C</div>
+                                    <div>T</div>
+                                    <div>I</div>
+                                    <div>V</div>
+                                    <div>E</div>
+                                </div>
+                            </span>
+    
+                            <span class="d-inline-block word-five">
+                                <div class="d-flex main-word">
+                                    <div>N</div>
+                                    <div>F</div>
+                                    <div>T</div>
+                                </div>
+                            </span>
+    
+                            <span class="d-inline-block word-six">
+                                <div class="d-flex main-word">
+                                    <div>C</div>
+                                    <div>O</div>
+                                    <div>L</div>
+                                    <div>L</div>
+                                    <div>E</div>
+                                    <div>C</div>
+                                    <div>T</div>
+                                    <div>I</div>
+                                    <div>O</div>
+                                    <div>N</div>
+                                </div>
+                            </span>
+                        </h1>
+                        <h1 class="text-two">
+                            <span class="d-inline-block word-one"> 
+                                <div class="d-flex main-word">
+                                    <div>H</div>
+                                    <div>E</div>
+                                    <div>A</div>
+                                    <div>L</div>
+                                    <div>I</div>
+                                    <div>N</div>
+                                    <div>G</div>
+                                </div>
+                            </span>
+    
+                            <span class="d-inline-block word-two">
+                                <div class="d-flex main-word">
+                                    <div>H</div>
+                                    <div>U</div>
+                                    <div>M</div>
+                                    <div>A</div>
+                                    <div>N</div>
+                                    <div>I</div>
+                                    <div>T</div>
+                                    <div>Y</div>
+                                    <div>.</div>
+                                </div>
+                            </span>
+    
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="all-floating-images">
+                    <img src="img/tree-bg.png" alt="" class="mouse-effect img-fluid" id="forest">
+                    <img src="img/bag.png" alt="" class="object mouse-effect img-fluid bag" id="obj-one">
+                    <img src="img/bag.png" alt="" class="object mouse-effect img-fluid bag" id="obj-two">
+                    <img src="img/bottle-02.png" alt="" class="object mouse-effect img-fluid bottle" id="obj-three">
+                    <img src="img/bag.png" alt="" class="object mouse-effect img-fluid bag" id="obj-four">
+                    <img src="img/bottle-01.png" alt="" class="object mouse-effect img-fluid bottle" id="obj-five">
+                    <img src="img/bottle-02.png" alt="" class="object mouse-effect img-fluid bottle" id="obj-six">
+                    <img src="img/bag.png" alt="" class="object mouse-effect img-fluid bag" id="obj-seven">
+                    <img src="img/bag.png" alt="" class="object mouse-effect img-fluid bag" id="obj-eight">
+                </div>
+            </div>
+        </section>
+
+        <section id="hero-bottom-images">
+            <img src="img/dark-leaf.svg" alt="" class="img-fluid">
+            <img src="img/orange-leaf.svg" alt="" class="img-fluid">
+            <img src="img/scroll-obj.svg" alt="" class="img-fluid">
+            <img src="img/orange-abstract.svg" alt="" class="img-fluid">
+        </section>
+
+        <section id="section-one" class="pb-100">
+            <div class="container">
+                <div class="text-center">
+                    <span class="title-box">
+                        <h1 class="section-title"> It's the first </h1>
+                    </span>
+                    <span class="title-box">
+                        <h1 class="section-title"> fully 3D dynamic nft! </h1>
+                    </span>
+                </div>
+
+
+                <div class="row mt-100 flex-column-reverse flex-lg-row">
+                    <div class="col-lg-4 col-md-12 col-12">
+                        <div class="d-flex justify-content-center">
+                            <video src="img/nft-vdo.mp4" autoplay loop muted class="img-fluid"></video>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-12 col-12 mb-lg-0 mb-md-5">
+                        <div class="text-center section-data">
+                            <p class="para22 fw-bold pb-25"> <u> Our Green Manifesto: </u> </p>
+                            <p class="para22 text-justify pb-25"> We’re living through change so profound. As the earth heats up, we can’t just stand by and watch — the time to act is now. We won't be able to stop climate change alone, but we can at least try to cool down the planet by getting the word out and teaching people how they can help. </p>
+                            <p class="para22 text-justify pb-25"> Creating a radical safe and inclusive space for driving change and history. We see this as the start of a global movement that will unite people from all corners of the globe in a common cause: to make everyone think, reflect and act for the good of our beloved Earth. </p>
+                            <p class="para22 text-justify pb-25"> When harnessed right, NFTs offer a unique opportunity to promote social good for the planet while having fun. If you care about Earth, people and justice — or if you just want to own some of the coolest & cutest NFTs — then here's your chance. </p>
+                            <p class="para22 fw-bold mb-0"> Get involved, enter Saplings' universe: </p>
+                            <p class="para22 fw-bold pb-25"> We can make a change — together. </p>
+
+                            <div class="btn-in-animation">
+                                <button id="creative-btn"> 
+                                    <div class="text-change">
+                                        <span> Read the full Whitepaper </span>  
+                                        <span> Read the full Whitepaper </span> 
+                                    </div>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="section-two" class="py-100">
+            <div class="container">
+                <div class="text-center">
+                    <span class="title-box">
+                        <h1 class="section-title-one ff-soulCraft"> A nostalgic mash-up of games </h1>
+                    </span>
+                    <span class="title-box">
+                        <h1 class="section-title-two ff-soulCraft"> we all know! </h1>
+                    </span>
+                    <p class="para20 text-gray mb-5"><em> We draw inspiration from the games we played as kids, including Animal Crossing, Pokémon, and Tamagotchi—and we're building on top of that—we are not affiliated with Nintendo or Bandai. </em></p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="nft-card text-center">
+                            <div class="nft-img mx-auto mb-5">
+                                <img src="img/activity-quests.svg" alt="" class="img-fluid">
+                            </div>
+                            <h3 class="text-white ff-soulCraft"> Unlock quests & </h3>
+                            <h2 class="text-white ff-soulCraft mb-4"> huge rewards </h2>
+                            <p class="para20 px-2"> Inspired by Pokémon, participate in a wide variety of quests, battle-pass, tournaments - earn XP, level up and unlock limited cosmetics, secret items, etc. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="nft-card text-center">
+                            <div class="nft-img mx-auto mb-5">
+                                <img src="img/activity-furnitures.svg" alt="" class="img-fluid">
+                            </div>
+                            <h3 class="text-white ff-soulCraft">  Decorate your </h3>
+                            <h2 class="text-white ff-soulCraft mb-4"> little garden </h2>
+                            <p class="para20 px-2"> Inspired by Animal Crossing, decorate your room with unique collectibles and furnishings that you'll earn as you progress through Saplings' adventures. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="nft-card text-center">
+                            <div class="nft-img mx-auto mb-5">
+                                <img src="img/activity-pet.svg" alt="" class="img-fluid">
+                            </div>
+                            <h3 class="text-white ff-soulCraft"> Take care of </h3>
+                            <h2 class="text-white ff-soulCraft mb-4"> your Saplings </h2>
+                            <p class="para20 px-2"> Inspired by Tamagotchi, raise your Saplings' level to unlock holders only benefits, unique cosmetics and awesome innovations in the NFT space. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="nft-card text-center">
+                            <div class="nft-img mx-auto mb-5">
+                                <img src="img/activity-saplings.svg" alt="" class="img-fluid">
+                            </div>
+                            <h3 class="text-white ff-soulCraft"> embark on </h3>
+                            <h2 class="text-white ff-soulCraft mb-4"> this journey </h2>
+                            <p class="para20 px-2"> Created by the hands of a talented team, immerse yourself in one of the most exciting worlds committed to promote climate justice through NFTs. </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mt-50">
+                        <div class="text-center">
+                            <div class="btn-in-animation">
+                                <button id="creative-btn"> 
+                                    <div class="text-change">
+                                        <span> Join the Adventure </span>  
+                                        <span> Join the Adventure </span> 
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="section-three" class="py-100">
+            <div class="container">
+                <div class="text-center">
+                    <span class="title-box">  
+                        <h1 class="section-title-one ff-soulCraft text-white"> But... what are we </h1>
+                    </span>
+                    <span class="title-box">
+                        <h1 class="section-title-two ff-soulCraft text-white"> really fighting? </h1>
+                    </span>
+                    <p class="para20 text-gray mb-5"><em> Here is a glimpse at how climate change threatens our world, showing all the issues that still need to be addressed. </em></p>
+                </div>
+                <div class="text-center ngo-partners">
+                    <p class="para22 text-white fw-medium text-gray my-5"> Backed by top recognized NGOs & Partners </p>
+
+                    <ul class="d-flex justify-content-center gap-5">
+                        <li>
+                            <img src="img/trees-logo.png" alt="" class="img-fluid">
+                        </li>
+                        <li>
+                            <img src="img/ac-logo.png" alt="" class="img-fluid">
+                        </li>
+                        <li>
+                            <img src="img/hih-logo.png" alt="" class="img-fluid">
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="section-four" class="py-100">
+            <div class="container">
+                    <div class="row pb-100">
+                        <div class="col-lg-4 col-md-12 huge-text">
+                            <h1 class="one ff-soulCraft text-white"> The big </h1>
+                            <h1 class="two ff-soulCraft text-white"> question: </h1>
+                            <h1 class="three ff-soulCraft text-white"> How? </h1>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <p class="para22"> We've partnered with top non-profit organizations that actively work to stop and reverse climate change. When you grab a FREE Saplings NFT, you have the choice to donate any amount of Ethereum. 50% of the funds will be directly sent to our partners and used to fight environmental issues throughout the world. </p>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <p class="para22 ps-lg-5 mb-5"> We're here to harness and empower the beautifulness of the NFT community in a way that entertains, informs and educates users about climate change — with the goal of restoring balance between humans and nature. </p>
+    
+                            <div class="text-center">
+                                <div class="btn-in-animation">
+                                    <button id="creative-btn"> 
+                                        <div class="text-change">
+                                            <span> Join the Commnunity </span>  
+                                            <span> Join the Commnunity </span> 
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pt-100">
+                        <div class="col-lg-4 col-md-12 col-12 pe-5">
+                            <div class="number d-flex align-items-end">
+                                <span class="text-white ff-soulCraft"> 5 </span>
+                                <span class="text-white ff-soulCraft"> 0 </span>
+                                <span class="text-white ff-soulCraft mb-4"> % </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-12 col-12">
+                            <div class="right-side">
+                                <div class="text-white ff-soulCraft "> OF the donations </div>
+                                <div class="text-white ff-soulCraft"> WILL GO to our </div>
+                                <div class="text-white ff-soulCraft"> NGOs partners. </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="black-stone">
+                <img src="img/ethereum-coin.png" alt="" class="img-fluid">
+            </div>
+        </section>
+
+        <section id="section-five" class="py-100">
+            <div class="container">
+                <div class="text-center">
+                    <div>
+                        <h1 class="text-one text-white">
+                            <span class="d-inline-block word-one"> 
+                                <div class="d-flex main-word">
+                                    <div class="ff-soulCraft">S</div>
+                                    <div class="ff-soulCraft">T</div>
+                                    <div class="ff-soulCraft">E</div>
+                                    <div class="ff-soulCraft">P</div>
+                                </div>
+                            </span>
+                            <span class="d-inline-block word-two">
+                                <div class="d-flex main-word">
+                                    <div class="ff-soulCraft">I</div>
+                                    <div class="ff-soulCraft">N</div>
+                                    <div class="ff-soulCraft">T</div>
+                                    <div class="ff-soulCraft">O</div>
+                                </div>
+                            </span>
+    
+                            <span class="d-inline-block word-three">
+                                <div class="d-flex main-word">
+                                    <div class="ff-soulCraft">T</div>
+                                    <div class="ff-soulCraft">H</div>
+                                    <div class="ff-soulCraft">E</div>
+                                </div>
+                            </span>
+                        </h1>
+                        <h1 class="text-two text-white">
+                            <span class="d-inline-block word-one"> 
+                                <div class="d-flex main-word">
+                                    <div class="ff-soulCraft">W</div>
+                                    <div class="ff-soulCraft">I</div>
+                                    <div class="ff-soulCraft">L</div>
+                                    <div class="ff-soulCraft">D</div>
+                                    <div class="ff-soulCraft">E</div>
+                                    <div class="ff-soulCraft">R</div>
+                                    <div class="ff-soulCraft">N</div>
+                                    <div class="ff-soulCraft">E</div>
+                                    <div class="ff-soulCraft">S</div>
+                                    <div class="ff-soulCraft">S</div>
+                                </div>
+                            </span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+        
+        <section id="stripe">
+            <div class="stripe-wrapper stripe-wrapper-one">
+                <ul class="d-flex ps-0 mb-0">
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+             
+                </ul>
+            </div>
+            <div class="stripe-wrapper stripe-wrapper-two">
+                <ul class="d-flex ps-0 mb-0">
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                    <li> #NFTFORGOOD  </li>
+                </ul>
+            </div>
+        </section>
+  
+        <section id="section-six">
+            <div class="container">
+                <div class="text-center">
+                    <span class="title-box">  
+                        <h1 class="section-title-one ff-soulCraft text-white"> Explore our long-term </h1>
+                    </span>
+                    <span class="title-box">
+                        <h1 class="section-title-two ff-soulCraft text-white"> impact roadmap </h1>
+                    </span>
+                </div>
+
+
+                <div class="accordion accordion-flush mt-100 border border-0" id="accordionFlushExample">
+                    <div class="accordion-item bg-transparent mb-md-5 mb-4 border border-0">
+                      <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+
+                        <div class="header-box">
+                            <div class="left-side">
+                                <div class="date">
+                                    <p class="mb-0 text-primary-green"> Q2 2022 </p>
+                                </div>
+                                <div class="chapter">
+                                    <p class="mb-0"> Chapter I. </p>
+                                    <h3 class="mb-0"> Planting Seeds & Removing Weeds </h3>
+                                </div>
+                            </div>
+                            <div class="right-side one"></div>
+                        </div>
+
+                      </div>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body ">
+                            <p class="para20 text-justify text-white mt-4"> We are pleased to announce the launch of our website and Discord on Earth's Day. </p>
+                            <p class="para20 text-justify text-white mt-4"> The roadmap and features have been properly addressed and structured. </p>
+                            <p class="para20 text-justify text-white mt-4"> Discover the Saplings’s Universe, a nostalgic mash-up of the team's favorite childhood games: <br> Animal Crossing, Pokémon, and Tamagotchi. This immersive experience will be your new profile picture, your life-long companion, and a long-term mini-game with benefits. </p>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="accordion-item bg-transparent mb-md-5 mb-4 border border-0">
+                      <h2 class="accordion-header" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <div class="header-box">
+                            <div class="left-side">
+                                <div class="date">
+                                    <p class="mb-0 text-primary-green"> Q3 2022 </p>
+                                </div>
+                                <div class="chapter">
+                                    <p class="mb-0"> Chapter II. </p>
+                                    <h3 class="mb-0"> Fighting Deforestation & Saving Trees </h3>
+                                </div>
+                            </div>
+                            <div class="right-side two"></div>
+                        </div>
+
+                      </h2>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p class="para20 text-justify text-white mt-4"> On a mission to spread awareness and educate people on the climate crisis—we are here to create a lovely, regen(erative) community and promote eco-friendly lifestyle. </p>
+                            <p class="para20 text-justify text-white mt-4"> We will bring you the latest climate change news in an engaging way by challenging you to collect XP and level up through our new innovative <a href="#" class="text-white">battle-pass system.</a> Each time you level up, you’ll unlock limited-edition accessories for your Saplings, roles, Whitelist spots, airdrops and random loot boxes. </p>
+                            
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="accordion-item bg-transparent mb-md-5 mb-4 border border-0">
+                      <h2 class="accordion-header" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        <div class="header-box">
+                            <div class="left-side">
+                                <div class="date">
+                                    <p class="mb-0 text-primary-green"> Q4 2022 </p>
+                                </div>
+                                <div class="chapter">
+                                    <p class="mb-0"> Chapter III. </p>
+                                    <h3 class="mb-0"> Discovering Our Beautiful Nature </h3>
+                                </div>
+                            </div>
+                            <div class="right-side three"></div>
+                        </div>
+                      </h2>
+                      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p class="para20 text-justify text-white mt-4"> Each Saplings will be randomly generated from a mix of over 100 traits, on-the-fly, when minted. 100% crafted and hand-painted by our team of 3D Designers and Concept Artists (Textures, 3D Accessories, Backgrounds, Expressions and Poses). <b> There are over 20 millions potential combinations and each one is guaranteed to be unlike any other in existence. </b> </p>
+                            <p class="para20 text-justify text-white mt-4"> Introducing a pure innovation in the NFT Space—one of the first Interactive and Dynamic NFT out there. <b> Forget everything you know about NFTs, because Saplings will be a major change from the norm. </b> </p>
+                            <p class="para20 text-justify text-white mt-4"> Your new NFT won’t be static; your NFT won’t be an image (you will still be able to use it as a PFP, don’t worry). <b> Saplings will introduce a fully immersive 3D experience where you can interact with your NFT in real time.  </b> This one will evolve over time—any updates or new features added will reflect directly into your NFT). </p>
+                            <p class="para20 text-justify text-white mt-4"> <em> Mini-updates/features example: Imagine if we want to give you a Christmas hat on Christmas day. In a matter of seconds, everyone would be able to claim their hat and add it to their Saplings Character. </em> </p>
+                            <p class="para20 text-justify text-white mt-4"> <b> To celebrate the occasion, we will hold a beta-presale featuring the first 40 NFTs at 50% off. </b> Only our most committed members will have access to this opportunity—this will help us get feedback and improve the overall experience for the real minting phase. </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item bg-transparent mb-md-5 mb-4 border border-0">
+                      <h2 class="accordion-header" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        <div class="header-box">
+                            <div class="left-side">
+                                <div class="date">
+                                    <p class="mb-0 text-primary-green"> Q4 2022 </p>
+                                </div>
+                                <div class="chapter">
+                                    <p class="mb-0"> Chapter IV. </p>
+                                    <h3 class="mb-0"> Absorbing Sunlight & Watering Plants </h3>
+                                </div>
+                            </div>
+                            <div class="right-side four"></div>
+                        </div>
+                      </h2>
+                      <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p class="para20 text-justify text-white mt-4"> Right after the BETA minting phase, we will launch our second innovation in the NFT space: the “Photo-Synthesis” studio. A place where you can take a picture of your NFT in a unique way. <b> You'll be able to take pictures of your Sapling from any angle and with any background, accessories, and expression you choose. </b> In a few clicks, you can change the photo of your NFT and update it across all marketplaces and social media. It’s like Photoshop for NFTs! </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item bg-transparent mb-md-5 mb-4 border border-0">
+                      <h2 class="accordion-header" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        <div class="header-box">
+                            <div class="left-side">
+                                <div class="date">
+                                    <p class="mb-0 text-primary-green"> Q2 2023 </p>
+                                </div>
+                                <div class="chapter">
+                                    <p class="mb-0"> Chapter V. </p>
+                                    <h3 class="mb-0"> Enjoying a Blossom Day </h3> 
+                                </div>
+                            </div>
+                            <div class="right-side five"></div>
+                        </div>
+                      </h2>
+                      <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p class="para20 text-justify text-white mt-4"> It's time for saplings to see the light of day! <br> <i> *Official Launch* We have begun sending the percentage of the donations that was pledged to our NGOs. </i> </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item bg-transparent mb-md-5 mb-4 border border-0">
+                      <h2 class="accordion-header" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                        <div class="header-box">
+                            <div class="left-side">
+                                <div class="date">
+                                    <p class="mb-0 text-gray"> Q2 2023 </p>
+                                </div>
+                                <div class="chapter">
+                                    <p class="mb-0 text-gray"> Chapter VI. </p>
+                                    <h3 class="mb-0 "> Giving Back Nature The Rights it Deserves </h3> 
+                                </div>
+                            </div>
+                            <div class="right-side six"></div>
+                        </div>
+                      </h2>
+                      <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p class="para20 text-justify text-white mt-4"> We will Introduce “The Stage”—our mission is to spread awareness and educate people about the climate crisis. <b>  We know that a lot of our community members can have a really strong story to tell—we want to give them a voice, emphasize their story, and help them share what they have to say by leveraging all of our social media activity. </b> </p>
+                            <p class="para20 text-justify text-white mt-4"> We’ll organize a series of AMA (Ask Me Anything) sessions with our NGO partners to highlight the positive impacts that our donations will have. </p>
+                            <p class="para20 text-justify text-white mt-4"> We’ll also be holding trash pickup and different events all around the world, allowing us to and learn about each other as we help clean up and debate over the environmental issues. </p>
+                            <p class="para20 text-justify text-white mt-4"> <b> Holders Benefits Not Mentioned So Far </b> <br> Alongside all the milestones listed below, we want to give the most out of this NFT. </p>
+                            <p class="para20 text-justify text-white mt-4"> We will try to push the boundaries of the possibilities in terms of collaboration and main-stream adoptions—we want to give you long term benefits like: private ticket access to conference, meetups on the climate crisis and environmental issues. We want to partner with cities and places where we can promote sustainability by offering discounts on subway tickets and bike rental. </p>
+                            <p class="para20 text-justify text-white mt-4"> Finally, we will try to help local communities in needs through our different NGOs partners by leveraging our community—YOU will be part of this huge social movement 💚. </p>
+                            <p class="para20 text-justify text-white mt-4"> <b> We Care For Our Whole Community Including Non-Holders </b> <br>
+                                <ul class="list--">
+                                    <li class="para20 text-justify text-white d-flex align-items-center"> <i class="fa-solid fa-circle"></i>  We Care For Our Whole Community Including Non-Holders  </li>
+                                    <li class="para20 text-justify text-white d-flex align-items-center"> <i class="fa-solid fa-circle"></i> Education will remain accessible to everyone </li>
+                                </ul>
+                            </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item bg-transparent mb-md-5 mb-4 border border-0">
+                      <h2 class="accordion-header" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                        <div class="header-box">
+                            <div class="left-side">
+                                <div class="date">
+                                    <p class="mb-0 text-gray"> Milestone </p>
+                                </div>
+                                <div class="chapter">
+                                    <p class="mb-0 text-gray"> 25,000$ Donated </p>
+                                    <h3 class="mb-0 "> Taking Care Of The Garden </h3> 
+                                </div>
+                            </div>
+                            <div class="right-side seven"></div>
+                        </div>
+                      </h2>
+                      <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p class="para20 text-justify text-white mt-4"> <b> <i> We cannot promise you a world without global warming by then, but we can still continue our quest for education with milestones! </i> </b> </p>
+                            <p class="para20 text-justify text-white mt-4"> <i> We want to involve our Holders—all of you—in shaping the Saplings project. We'll be taking your votes into account on almost every in-game decision. </i> </p>
+                            <p class="para20 text-justify text-white mt-4"> <b> A more immersive and enjoyable gaming experience, in the palm of your hand: </b> <br>
+                                Transforming this experience into a playable tamagotchi, take care of your Saplings, participate in a variety of mini-games and win new rewards and accessories. Adding a lot of in-game and IRL quests. Introducing the Garden, our 3rd innovation, a place that you can decorate with furnitures that you earn by engaging in community activities (Events, airdrop, giveaways, <a href="#" class="text-white">quests & loot boxes system</a>, etc.) <b>Inspired by Animal Crossing, you will be able to customize your Garden, rotate and place furnitures and view them live when visiting your NFT online.</b> Customize it however you want; those furnishings will be visible when you will take a new PFP of your Saplings. </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item bg-transparent mb-md-5 mb-4 border border-0">
+                      <h2 class="accordion-header" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                        <div class="header-box">
+                            <div class="left-side">
+                                <div class="date">
+                                    <p class="mb-0 text-gray"> Milestone </p>
+                                </div>
+                                <div class="chapter">
+                                    <p class="mb-0 text-gray"> 50,000$ Donated </p>
+                                    <h3 class="mb-0 "> Spirit of Storytelling & Education </h3> 
+                                </div>
+                            </div>
+                            <div class="right-side eight"></div>
+                        </div>
+                      </h2>
+                      <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p class="para20 text-justify text-white mt-4"> 
+                                <!-- <p class="para20 text-justify text-white mt-4"> -->
+                                    <ul class="list--">
+                                        <li class="d-flex"> 
+                                            <i class="fa-solid fa-circle text-white mt-2"></i> 
+                                            <p class="para20 text-justify text-white">
+                                                <b>  We plan to create a Comic for children featuring your NFTs. </b> <br>
+                                                We think that the best way to save the world is to start with our children. Something that will teach kids about how their actions affect the earth. This way, they'll learn from an early age how important it is to take care of our planet.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                <!-- </p> -->
+                            </p>
+                            <p class="para20 text-justify text-white mt-4"> <i>We will involve all our holders into the creation of this Comic—and we will feature your NFTs inside. Let's teach the world together.</i> </p>
+                            <p class="para20 text-justify text-white mt-4"> Every donors will get a <b>FREE</b> shipment on the Comic. </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item bg-transparent mb-md-5 mb-4 border border-0">
+                      <h2 class="accordion-header" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                        <div class="header-box">
+                            <div class="left-side">
+                                <div class="date">
+                                    <p class="mb-0 text-gray"> Milestone </p>
+                                </div>
+                                <div class="chapter">
+                                    <p class="mb-0 text-gray"> 75,000$ Donated </p>
+                                    <h3 class="mb-0 "> Dropping a Mobile Game </h3> 
+                                </div>
+                            </div>
+                            <div class="right-side nine"></div>
+                        </div>
+                      </h2>
+                      <div id="flush-collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p class="para20 text-justify text-white mt-4"> 
+                                <!-- <p class="para20 text-justify text-white mt-4"> -->
+                                    <ul class="list--">
+                                        <li class="d-flex" > 
+                                            <i class="fa-solid fa-circle text-white mt-2"></i> 
+                                            <p class="para20 text-justify text-white">
+                                                <b> Releasing a crazy and addictive mobile game. </b> <br>
+                                                 What about learning useful things about our planet while having fun? <br> We will involve all our holders into the creation of this Game—and we will feature your NFTs inside. Let's teach the world together ✨
+                                            </p>
+                                        </li>
+                                    </ul>
+                                <!-- </p> -->
+                            </p>
+                            <p class="para20 text-justify text-white mt-4"> <i>Every donors will get a Welcome pack inside the Game. Every NFT of every holder will be used in the Game. (With their respective names and genres)</i> </p>
+                            <!-- <p class="para20 text-justify text-white mt-4"> Every donors will get a <b>FREE</b> shipment on the Comic. </p> -->
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item bg-transparent mb-md-5 mb-4 border border-0">
+                      <h2 class="accordion-header" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                        <div class="header-box">
+                            <div class="left-side">
+                                <div class="date">
+                                    <p class="mb-0 text-gray"> Milestone </p>
+                                </div>
+                                <div class="chapter">
+                                    <p class="mb-0 text-gray"> 100,000$ Donated </p>
+                                    <h3 class="mb-0 "> Let’s Be United Forever & Play Some Games </h3>
+                                </div>
+                            </div>
+                            <div class="right-side ten"></div>
+                        </div>
+                      </h2>
+                      <div id="flush-collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p class="para20 text-justify text-white mt-4"> 
+                                <!-- <p class="para20 text-justify text-white mt-4"> -->
+                                    <ul class="list--">
+                                        <li class="d-flex">
+                                            <i class="fa-solid fa-circle text-white mt-2"></i>
+                                            <p class="para20 text-justify text-white"> We said it is a great time to teach children about conserving the planet Earth. What about everyone else? Everyone should be aware of that, Your grandma, your uncle... even your dog! <br>
+                                                <b>We plan to create and launch a Board Game for the whole family—A great way to learn more about our planet while having fun 💚 (We will create this one in multiple languages) </b> </p>
+                                        </li>
+                                    </ul>
+                                <!-- </p> -->
+                            </p>
+                            <p class="para20 text-justify text-white mt-4"> <i>We will involve all our holders into the creation of this Board Game—and we will feature your NFTs inside as well.</i> </p>
+                            <p class="para20 text-justify text-white mt-4"> Every donors will get a <b>FREE</b> shipment on the Board game.</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+
+            </div>
+        </section>
+
+
+        <section id="section-seven" class="pt-100">
+            <div class="container">
+                <div class="text-center pt-100">
+                    <div>
+                        <h1 class="text-one text-tertiary-green">
+                            <span class="d-inline-block word-one"> 
+                                <div class="d-flex main-word">
+                                    <div class="ff-soulCraft">C</div>
+                                    <div class="ff-soulCraft">O</div>
+                                    <div class="ff-soulCraft">M</div>
+                                    <div class="ff-soulCraft">E</div>
+                                </div>
+                            </span>
+                            <span class="d-inline-block word-two">
+                                <div class="d-flex main-word">
+                                    <div class="ff-soulCraft">G</div>
+                                    <div class="ff-soulCraft">R</div>
+                                    <div class="ff-soulCraft">O</div>
+                                    <div class="ff-soulCraft">W</div>
+                                </div>
+                            </span>
+                        </h1>
+                        <h1 class="text-two text-secondary-green">
+                            <span class="d-inline-block word-one"> 
+                                <div class="d-flex main-word">
+                                    <div class="ff-soulCraft">W</div>
+                                    <div class="ff-soulCraft">I</div>
+                                    <div class="ff-soulCraft">T</div>
+                                    <div class="ff-soulCraft">H</div>
+                                </div>
+                            </span>
+                            <span class="d-inline-block word-one"> 
+                                <div class="d-flex main-word">
+                                    <div class="ff-soulCraft">U</div>
+                                    <div class="ff-soulCraft">S</div>
+                                    <div class="ff-soulCraft">.</div>
+                                </div>
+                            </span>
+                        </h1>
+                    </div>
+
+                    <div class="btn-in-animation">
+                        <button id="creative-btn" class="mt-5"> 
+                            <div class="text-change">
+                                <span> Join the Discord</span>  
+                                <span> Join the Discord</span> 
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="bottom-leaves pt-100">
+                    <div class="row">
+                        <div class="col-4 d-flex align-items-end">
+                            <img src="img/bottom-leaf-flip.svg" alt="" class="img-fluid leaf-01">
+                        </div>
+                        <div class="col-4 d-flex align-items-end justify-content-center">
+                            <img src="img/bottom-leaf.svg" alt="" class="img-fluid leaf-02">
+                        </div>
+                        <div class="col-4 d-flex align-items-end justify-content-end">
+                            <img src="img/bottom-leaf.svg" alt="" class="img-fluid leaf-03">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="text-center">
+                <div class="footer-logo">
+                    <svg width="265" height="106" viewBox="0 0 1383 555" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M769.484 226.447C780.931 234.261 794.974 237.492 808.769 235.441C830.1 232.27 846.28 217.444 852.52 197.497C827.086 201.124 818.265 194.674 812.384 190.375C873.737 181.253 873.473 145.076 855.566 96C838.765 123.951 813.578 126.151 798.875 127.435C786.239 128.539 774.397 132.443 764.664 140.809C756.368 147.94 750.428 157.373 747.615 167.885C744.293 180.298 745.585 193.735 751.205 205.299C775.629 168.442 814.759 160.729 814.759 160.729C814.759 160.729 781.23 183.37 760.085 217.642C750.175 233.617 744.368 250.287 743 257.659L757.342 262C757.342 262 758.976 244.73 769.484 226.447Z" fill="#FCF8F5"></path><path d="M278.6 338.9C279 299.4 252 298.1 221.4 293.1C210.6 289.3 220 283 228.6 284.2C242.5 283.9 258.2 284.8 271.2 287.5L276.6 255C232.1 243.6 165.2 247.1 183.8 309.7C192.9 333 222 330.5 241.2 337.4C251.6 350.3 188.2 342.1 183.6 340.6L178.3 373.6C212.8 380.4 278.9 389.1 278.6 338.9Z" fill="#FCF8F5"></path><path d="M568.3 279.6C558.9 240 499.9 254.5 470.4 251.9V377H515.4V350.2C565 353.5 577.2 322.8 568.3 279.6ZM528.9 307.5C527.7 314.4 521.2 315.1 515.3 314.7V287.3C529.4 285.2 530.9 296.5 528.9 307.5Z" fill="#FCF8F5"></path><path d="M720.3 341.8V377H585.3V252.9H636.1V341.8H720.3Z" fill="#FCF8F5"></path><path d="M729.8 377H774.8V251.8H729.8V377Z" fill="#FCF8F5"></path><path d="M891 251.8V377H855.7L821.3 327.1V377H786.2V251.8H821.3L855.7 301.7V251.8H891Z" fill="#FCF8F5"></path><path d="M1089.4 308.6V377H1059.4L1049.3 362C1018 386.8 936.5 386.1 913.3 350.6C893.3 320.4 903.3 269.3 941.5 258.1C958.8 250.7 987.4 251 1008.1 251.2C1041.7 251.3 1081.7 261.7 1087.5 297.9L1037.1 304.4C1032.8 290 1017.3 285.6 1003.1 285.6C993.7 285.6 979.8 285.1 972 288.6C950 295.7 950.6 333.6 971.8 341.2C979.5 344.8 993.2 344.3 1002.4 344.2C1015 344.1 1026.8 341.2 1033.3 330.8H980.6V308.5H1089.4V308.6Z" fill="#FCF8F5"></path><path d="M1203.2 338.9C1203.6 299.4 1176.6 298.1 1145.9 293.1C1135.1 289.3 1144.5 283 1153.1 284.2C1167 283.9 1182.7 284.8 1195.7 287.5L1201.1 255C1156.6 243.6 1089.7 247.1 1108.3 309.7C1117.4 333 1146.5 330.5 1165.7 337.4C1176.1 350.3 1112.7 342.1 1108.1 340.6L1102.8 373.6C1137.3 380.4 1203.4 389.1 1203.2 338.9Z" fill="#FCF8F5"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M408.7 252.9H337.9L285.8 377H326.5L334.8 354.7H395.4L404.3 377H461L408.7 252.9ZM345.2 326.6L360.2 286.4H368.2L384.2 326.6H345.2Z" fill="#FCF8F5"></path></svg>
+                </div>
+                <ul class="social-icons d-flex justify-content-center gap-3 my-4 ps-0">
+                    <li>
+                        <a href="#">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.6666 10.0182C25.867 10.3674 25.0201 10.5963 24.1535 10.6976C25.0631 10.1635 25.7472 9.31641 26.0778 8.3147C25.2159 8.81638 24.2759 9.16974 23.297 9.36003C22.8848 8.92825 22.3889 8.58498 21.8397 8.35115C21.2904 8.11733 20.6993 7.99786 20.1023 8.00003C17.6853 8.00003 15.7258 9.9307 15.7258 12.3094C15.7258 12.6464 15.7642 12.976 15.8389 13.2907C14.1051 13.2082 12.4075 12.7653 10.8545 11.99C9.30149 11.2148 7.92713 10.1244 6.81912 8.7883C6.43067 9.44366 6.22649 10.1918 6.22819 10.9536C6.22819 12.4502 7.00045 13.7696 8.17379 14.5408C7.4799 14.5184 6.80101 14.3332 6.19192 14V14.0534C6.19192 16.1419 7.70125 17.8838 9.70125 18.2806C9.32537 18.3803 8.93814 18.4309 8.54925 18.431C8.26659 18.431 7.99245 18.4043 7.72472 18.351C8.01067 19.2127 8.5579 19.9641 9.29039 20.5007C10.0229 21.0372 10.9043 21.3324 11.8122 21.3451C10.2549 22.5446 8.34319 23.1926 6.37752 23.1872C6.02339 23.1872 5.67565 23.1659 5.33325 23.1275C7.33992 24.3976 9.66668 25.0702 12.0415 25.0667C20.0917 25.0667 24.4927 18.4992 24.4927 12.8043L24.4778 12.2464C25.3363 11.6423 26.0779 10.8873 26.6666 10.0182Z" fill="#FCF8F5"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5447 7.01094C16.5249 6.54302 15.4313 6.19828 14.2879 6.00083C14.2671 5.99702 14.2463 6.00654 14.2356 6.02559C14.0949 6.27573 13.9392 6.60206 13.8301 6.85856C12.6003 6.67445 11.3768 6.67445 10.1722 6.85856C10.0631 6.59636 9.90166 6.27573 9.76038 6.02559C9.74966 6.00718 9.72886 5.99765 9.70803 6.00083C8.56527 6.19765 7.47171 6.54239 6.45129 7.01094C6.44246 7.01475 6.43488 7.02111 6.42986 7.02935C4.35559 10.1283 3.78737 13.151 4.06612 16.1363C4.06738 16.1509 4.07558 16.1648 4.08693 16.1737C5.45547 17.1787 6.78114 17.7889 8.08219 18.1933C8.10301 18.1997 8.12507 18.192 8.13832 18.1749C8.44608 17.7546 8.72043 17.3114 8.95565 16.8454C8.96953 16.8181 8.95628 16.7857 8.92791 16.775C8.49275 16.6099 8.0784 16.4086 7.67982 16.1801C7.64829 16.1617 7.64577 16.1166 7.67477 16.095C7.75865 16.0321 7.84255 15.9667 7.92264 15.9007C7.93713 15.8886 7.95732 15.8861 7.97435 15.8937C10.5929 17.0892 13.4277 17.0892 16.0153 15.8937C16.0323 15.8855 16.0525 15.888 16.0677 15.9001C16.1478 15.9661 16.2316 16.0321 16.3161 16.095C16.3451 16.1166 16.3433 16.1617 16.3117 16.1801C15.9131 16.4131 15.4988 16.6099 15.063 16.7743C15.0346 16.7851 15.022 16.8181 15.0359 16.8454C15.2762 17.3108 15.5505 17.754 15.8526 18.1743C15.8652 18.192 15.8879 18.1997 15.9087 18.1933C17.2161 17.7889 18.5417 17.1787 19.9103 16.1737C19.9223 16.1648 19.9298 16.1515 19.9311 16.1369C20.2647 12.6856 19.3723 9.68765 17.5655 7.02998C17.5611 7.02111 17.5535 7.01475 17.5447 7.01094ZM9.34668 14.3185C8.55833 14.3185 7.90875 13.5948 7.90875 12.7059C7.90875 11.8171 8.54574 11.0933 9.34668 11.0933C10.1539 11.0933 10.7972 11.8234 10.7846 12.7059C10.7846 13.5948 10.1476 14.3185 9.34668 14.3185ZM14.6632 14.3185C13.8748 14.3185 13.2253 13.5948 13.2253 12.7059C13.2253 11.8171 13.8622 11.0933 14.6632 11.0933C15.4704 11.0933 16.1137 11.8234 16.1011 12.7059C16.1011 13.5948 15.4704 14.3185 14.6632 14.3185Z" fill="#FCF8F5"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 14.204V15.04C20 15.088 19.9707 15.1307 19.928 15.1493C19.6667 15.2613 18.772 15.672 18.4 16.1893C17.4507 17.5107 16.7253 19.4 15.104 19.4H8.33999C5.94267 19.4 4 17.4507 4 15.0453V14.968C4 14.904 4.052 14.852 4.11599 14.852H7.88666C7.96133 14.852 8.01601 14.9213 8.00934 14.9947C7.98267 15.24 8.028 15.4907 8.14399 15.7187C8.36799 16.1733 8.83201 16.4573 9.33332 16.4573H11.2V15H9.35467C9.25999 15 9.20401 14.8907 9.25866 14.8133C9.27867 14.7827 9.30134 14.7507 9.32534 14.7147C9.49999 14.4667 9.74933 14.0813 9.99732 13.6427C10.1667 13.3467 10.3307 13.0307 10.4627 12.7133C10.4893 12.656 10.5107 12.5973 10.532 12.54C10.568 12.4387 10.6053 12.344 10.632 12.2493C10.6587 12.1693 10.68 12.0853 10.7013 12.0067C10.764 11.7373 10.7907 11.452 10.7907 11.156C10.7907 11.04 10.7853 10.9187 10.7747 10.8027C10.7693 10.676 10.7533 10.5493 10.7373 10.4227C10.7267 10.3107 10.7067 10.2 10.6853 10.084C10.6587 9.91466 10.6213 9.74668 10.5787 9.57733L10.564 9.51334C10.532 9.39735 10.5053 9.28666 10.468 9.17067C10.3627 8.80666 10.2413 8.452 10.1133 8.12C10.0667 7.988 10.0133 7.86134 9.96 7.73468C9.88133 7.54399 9.80133 7.37067 9.72799 7.20666C9.69067 7.132 9.65866 7.06399 9.62668 6.99466C9.59066 6.91599 9.55334 6.83735 9.51599 6.76265C9.48934 6.70532 9.45866 6.652 9.43732 6.59867L9.20935 6.17733C9.17733 6.12 9.23066 6.052 9.29332 6.06933L10.72 6.45601H10.724C10.7267 6.45601 10.728 6.45733 10.7293 6.45733L10.9173 6.50933L11.124 6.56799L11.2 6.58933V5.74134C11.2 5.332 11.528 5 11.9333 5C12.136 5 12.32 5.08265 12.452 5.21733C12.584 5.35201 12.6667 5.53601 12.6667 5.74134V7L12.8187 7.04265C12.8307 7.04666 12.8427 7.052 12.8533 7.05999C12.8907 7.08799 12.944 7.12934 13.012 7.17999C13.0653 7.22267 13.1227 7.27466 13.192 7.32799C13.3293 7.43867 13.4933 7.58134 13.6733 7.74532C13.7213 7.78668 13.768 7.82933 13.8107 7.87201C14.0427 8.08799 14.3027 8.34134 14.5507 8.62134C14.62 8.69999 14.688 8.77999 14.7573 8.86399C14.8267 8.94933 14.9 9.03334 14.964 9.11735C15.048 9.22933 15.1387 9.34532 15.2173 9.46668C15.2547 9.52401 15.2973 9.58267 15.3333 9.64C15.4347 9.79334 15.524 9.95201 15.6093 10.1107C15.6453 10.184 15.6827 10.264 15.7147 10.3427C15.8093 10.5547 15.884 10.7707 15.932 10.9867C15.9467 11.0333 15.9573 11.084 15.9627 11.1293V11.14C15.9787 11.204 15.984 11.272 15.9893 11.3413C16.0107 11.5627 16 11.784 15.952 12.0067C15.932 12.1013 15.9053 12.1907 15.8733 12.2853C15.8413 12.376 15.8093 12.4707 15.768 12.56C15.688 12.7453 15.5933 12.9307 15.4813 13.104C15.4453 13.168 15.4027 13.236 15.36 13.3C15.3133 13.368 15.2653 13.432 15.2227 13.4947C15.164 13.5747 15.1013 13.6587 15.0373 13.7333C14.98 13.812 14.9213 13.8907 14.8573 13.96C14.768 14.0653 14.6827 14.1653 14.5933 14.2613C14.54 14.324 14.4827 14.388 14.424 14.4453C14.3667 14.5093 14.308 14.5667 14.2547 14.62C14.1653 14.7093 14.0907 14.7787 14.028 14.836L13.8813 14.9707C13.86 14.9893 13.832 15 13.8027 15H12.6667V16.4573H14.096C14.416 16.4573 14.72 16.344 14.9653 16.136C15.0493 16.0627 15.416 15.7453 15.8493 15.2667C15.864 15.2507 15.8827 15.2387 15.904 15.2333L19.852 14.092C19.9253 14.0707 20 14.1267 20 14.204Z" fill="#FCF8F5"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.1574 14.5313L15.8761 13.25L17.1574 11.9687C17.494 11.6321 17.761 11.2325 17.9432 10.7927C18.1253 10.353 18.2191 9.88163 18.2191 9.40563C18.2191 8.92962 18.1253 8.45828 17.9432 8.01851C17.761 7.57874 17.494 7.17915 17.1574 6.84257C16.8208 6.50598 16.4213 6.23899 15.9815 6.05683C15.5417 5.87467 15.0704 5.78091 14.5944 5.78091C14.1184 5.78091 13.647 5.87467 13.2073 6.05683C12.7675 6.23899 12.3679 6.50598 12.0313 6.84257L10.75 8.12387L9.4687 6.84257L10.75 5.56126C11.7724 4.55535 13.1509 3.9942 14.5852 4.00005C16.0195 4.00589 17.3934 4.57824 18.4076 5.59244C19.4218 6.60664 19.9941 7.98052 20 9.4148C20.0058 10.8491 19.4446 12.2276 18.4387 13.25L17.1574 14.5313V14.5313ZM14.5939 17.0948L13.3126 18.3761C12.8093 18.8877 12.2096 19.2946 11.5482 19.5733C10.8868 19.852 10.1768 19.997 9.45908 20C8.74137 20.0029 8.03018 19.8637 7.36654 19.5904C6.7029 19.3171 6.09994 18.9151 5.59244 18.4076C5.08494 17.9001 4.68294 17.2971 4.40964 16.6335C4.13633 15.9698 3.99712 15.2586 4.00005 14.5409C4.00297 13.8232 4.14796 13.1132 4.42666 12.4518C4.70537 11.7904 5.11226 11.1907 5.62388 10.6874L6.90518 9.40608L8.18649 10.6874L6.90518 11.9687C6.5686 12.3053 6.3016 12.7049 6.11944 13.1446C5.93728 13.5844 5.84353 14.0557 5.84353 14.5318C5.84353 15.0078 5.93728 15.4791 6.11944 15.9189C6.3016 16.3586 6.5686 16.7582 6.90518 17.0948C7.24177 17.4314 7.64135 17.6984 8.08113 17.8806C8.5209 18.0627 8.99224 18.1565 9.46825 18.1565C9.94425 18.1565 10.4156 18.0627 10.8554 17.8806C11.2951 17.6984 11.6947 17.4314 12.0313 17.0948L13.3126 15.8135L14.5939 17.0948ZM14.5939 8.12387L15.8761 9.40608L9.4687 15.8126L8.18649 14.5313L14.5939 8.12478V8.12387Z" fill="#FCF8F5"></path></svg>
+                        </a>
+                    </li>
+                </ul>
+                <p class="para20 text-gray"> 
+                    <i>
+                        Thanks to our beautiful team of Designers, <br>
+                        Saplings has been featured in many web design awards across the web:
+                    </i>
+                    <br>
+                    <a href="#" class="para20">Awwwards </a> - <a href="#" class="para20"> CSS Design Awards </a> - <a href="#" class="para20">Designrush</a>
+                </p>
+                <p class="para20 text-gray">
+                    Copyright © 2024 - Saplings <br>
+                    All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <div style="width: 25%; height: 1500px; background-color: #158dea;"></div> -->
+
+</body>
+    <!-- bootstarp js -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Scroll Trigger CDN  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Swiper js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- jQuery CDN  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
+</html>
